@@ -100,8 +100,7 @@ toggleButton = function (id) {
     } else {
         stateTable[Math.floor(pos / size)][pos % size] = 0;
     }
-    //console.log(stateTable);
-    //console.log(multiplyMatrices(stateTable,stateTable));
+
     drawGraph();
     if(powerSet)
         calculateWays();
@@ -125,7 +124,6 @@ drawGraph = function () {
         directives += i + "; "
     }
     directives += "}";
-    //console.log(directives);
     var container = document.getElementById("graph");
     var data = vis.parseDOTNetwork(directives);
 
@@ -175,7 +173,6 @@ calculateWays = function () {
     for (var i = 1; i < inputVal; i++) {
         mat = multiplyMatrices(mat, stateTable);
     }
-    console.log(mat);
     fillMatMul(mat);
     powerMat =mat;
     power = inputVal;
@@ -222,7 +219,6 @@ fillMatMul = function (data){
         var tr = document.createElement("tr");
         for(var j = 0; j < size; j++){
             var td =document.createElement("td");
-            //console.log(data[i][j]);
             td.innerText = data[i][j].toString();
             td.setAttribute("data-toggle","tooltip");
             td.setAttribute("title",i+","+j);
@@ -272,7 +268,6 @@ $(function () {
   })
 
 describeVal = function(i,j){
-    //console.log(i+" "+ j);
     
     var msg = document.getElementById("msgWays");
     if(i==null){
@@ -289,7 +284,7 @@ describeVal = function(i,j){
 describeMat = function(val){
     var msg = document.getElementById("msgMat");
     if(val == null){
-       msg.innerHtml = "";
+       msg.innerHTML = "";
     } else {
         msg.innerHTML ="Matriz de adyacencia elevada a la "+val+ " (A<sup>"+val+"</sup>=)";
     }
