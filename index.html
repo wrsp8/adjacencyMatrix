@@ -6,13 +6,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Caminos por N nodos</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
+    
     <!-- libreria de graficos -->
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
     <!-- libreria de bootstrap -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -28,11 +29,14 @@
 
     <!-- libreria grafica de ecuaciones -->
 
+
+    <!-- refrencias propias-->
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 
 <body>
-    <h1>ALGEBRA LINEAL 2 - CAMINOS DE LONGITUD N</h1>
+    <h1>ÁLGEBRA LINEAL 2 - CAMINOS DE LONGITUD N</h1>
 
     <div class="container">
 
@@ -41,7 +45,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text" id="">Cantidad de nodos:</span>
             </div>
-            <input type="text" id="amountOfNodes" class="form-control" placeholder="Número entre 3-15"
+            <input type="text" id="amountOfNodes" class="form-control" placeholder="Número entre 1-15"
                 aria-describedby="basic-addon2">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="generate()">Generar</button>
@@ -53,12 +57,14 @@
             <div class="row">
                 <div class="col-sm">
                     <!-- dibjuar botones -->
+                    <h2>Matriz de adyacencia:</h2>
                     <div id="buttonTable" class="btn-group-toggle" data-toggle="buttons"></div>
+
                     <h2>Caminos de longitud N:</h2>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="">Seleccione la candidad de pasos:</span>
+                            <span class="input-group-text" id="">Candidad de pasos:</span>
                         </div>
                         <input type="text" id="lengthSteps" class="form-control" placeholder="Número entre 1-15"
                             aria-describedby="basic-addon2">
@@ -67,6 +73,16 @@
                                 onclick="calculateWays()">Calcular</button>
                         </div>
                     </div>
+
+                    <!-- dibujar matriz calculada -->
+                    <!-- mensaje de que es la matriz-->
+                    <p id="msgMat"></p>
+                    <div align="center">
+                        <table class="matrix" id = "matMul">
+                        </table>
+                    </div>
+                    <!-- mensaje de numero de caminos-->
+                    <p id="msgWays"></p>
                 </div>
                 <div class="col-sm">
                     <!-- dibujar grafo -->
