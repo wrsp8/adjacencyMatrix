@@ -1,0 +1,29 @@
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    background: -webkit-linear-gradient(#999, rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: visible;
+    padding: 30px 30px 30px 30px;
+}
+
+#buttonTable {
+    margin: 0 auto;
+}
+
+.btn {
+    margin: 0 auto;
+}
+
+#graph{
+    height: 50%;
+    width: 70%;
+}
+
+td {
+    text-align:center;
+    text-shadow: #999;
+    text-decoration:black;
+    font-weight:bold;
+}

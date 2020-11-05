@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Caminos por N nodos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+
+    <!-- libreria de graficos -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <!-- libreria de bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- css de boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- libreria grafica de ecuaciones -->
+
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>ALGEBRA LINEAL 2 - CAMINOS DE LONGITUD N</h1>
+
+    <div class="container">
+
+        <!-- Boton de generar -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">Cantidad de nodos:</span>
+            </div>
+            <input type="text" id="amountOfNodes" class="form-control" placeholder="Número entre 3-15"
+                aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="generate()">Generar</button>
+            </div>
+        </div>
+
+        <div class="container d-none" id="steps">
+
+            <div class="row">
+                <div class="col-sm">
+                    <!-- dibjuar botones -->
+                    <div id="buttonTable" class="btn-group-toggle" data-toggle="buttons"></div>
+                    <h2>Caminos de longitud N:</h2>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Seleccione la candidad de pasos:</span>
+                        </div>
+                        <input type="text" id="lengthSteps" class="form-control" placeholder="Número entre 1-15"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button"
+                                onclick="calculateWays()">Calcular</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <!-- dibujar grafo -->
+                    <div id="graph"></div>
+                </div>
+            </div>
+
+            <!-- dibujar matrix -->
+            <div id="mathText"></div>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
