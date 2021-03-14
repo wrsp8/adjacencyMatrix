@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Caminos por N nodos</title>
+    <title>Adjacency Matrix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 
@@ -36,19 +36,19 @@
 </head>
 
 <body>
-    <h1>ÁLGEBRA LINEAL 2 - CAMINOS DE LONGITUD N</h1>
+    <h1>ADJACENCY MATRIX</h1>
 
     <div class="container">
 
         <!-- Boton de generar -->
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="">Cantidad de nodos:</span>
+                <span class="input-group-text" id="">Number of nodes:</span>
             </div>
-            <input type="text" id="amountOfNodes" class="form-control" placeholder="Número entre 1-15"
+            <input type="text" id="amountOfNodes" class="form-control" placeholder="Number between 1-15"
                 aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" onclick="generate()">Generar</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="generate()">Generate</button>
             </div>
         </div>
 
@@ -57,20 +57,20 @@
             <div class="row">
                 <div class="col-sm">
                     <!-- dibjuar botones -->
-                    <h2>Matriz de adyacencia:</h2>
+                    <h2>Adjacency Matrix:</h2>
                     <div id="buttonTable" class="btn-group-toggle" data-toggle="buttons"></div>
 
-                    <h2>Caminos de longitud N:</h2>
+                    <h2>Paths of length N:</h2>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="">Candidad de pasos:</span>
+                            <span class="input-group-text" id="">Number of steps:</span>
                         </div>
-                        <input type="text" id="lengthSteps" class="form-control" placeholder="Número entre 1-15"
+                        <input type="text" id="lengthSteps" class="form-control" placeholder="Number between 1-15"
                             aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button"
-                                onclick="calculateWays()">Calcular</button>
+                                onclick="calculateWays()">Calculate</button>
                         </div>
                     </div>
 

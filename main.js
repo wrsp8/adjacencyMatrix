@@ -161,12 +161,12 @@ calculateWays = function () {
     try {
         inputVal = parseInt(document.getElementById("lengthSteps").value);
     } catch (error) {
-        alert("No es un número");
+        alert("Its not a number");
         return;
     }
 
     if (!validNodes(inputVal)) {
-        alert("número invalido...");
+        alert("Invalid number...");
         return;
     }
     var mat = stateTable;
@@ -274,9 +274,9 @@ describeVal = function(i,j){
         msg.innerHTML = "";
     } else {
         if(power==1){
-            msg.innerHTML = "Existen "+powerMat[i][j]+" caminos que pasan por 1 nodo, que inician en el nodo "+i+" y terminan en el nodo "+j;
+            msg.innerHTML = "There are "+powerMat[i][j]+" paths that have length 1, that start at node "+i+" and end at node "+j;
         } else {
-            msg.innerHTML = "Existen "+powerMat[i][j]+" caminos que pasan por "+power+" nodos, que inician en el nodo "+i+" y terminan en el nodo "+j;
+            msg.innerHTML = "There are "+powerMat[i][j]+" paths that have length "+power+ ", that start at node "+i+" and end at node "+j;
         }
     }
 }
@@ -286,6 +286,6 @@ describeMat = function(val){
     if(val == null){
        msg.innerHTML = "";
     } else {
-        msg.innerHTML ="Matriz de adyacencia elevada a la "+val+ " (A<sup>"+val+"</sup>=)";
+        msg.innerHTML ="Adjacency Matrix to the power of "+val+ " (A<sup>"+val+"</sup>=)";
     }
 }
